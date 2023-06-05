@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senac.aula.javafx.controller.ClienteController">
+   <children>
+      <VBox prefHeight="406.0" prefWidth="600.0">
+         <children>
+            <TabPane prefHeight="407.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Clientes">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="18.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Documentos" wrappingWidth="73.13671875" />
+                              <Text layoutX="152.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="73.13671875" />
+                              <Text layoutX="347.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RG" wrappingWidth="73.13671875" />
+                              <Text layoutX="18.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="73.13671875" />
+                              <Text layoutX="204.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" wrappingWidth="73.13671875" />
+                              <Button fx:id="btnExcluir" layoutX="95.0" layoutY="157.0" mnemonicParsing="false" onAction="#executExcluir" text="Excluir" />
+                              <Button fx:id="executarOk" layoutX="18.0" layoutY="157.0" mnemonicParsing="false" onAction="#executarOk" text="Salvar" />
+                              <TextField fx:id="documento" layoutX="18.0" layoutY="41.0" prefHeight="25.0" prefWidth="102.0" />
+                              <TextField fx:id="nome" layoutX="152.0" layoutY="37.0" prefHeight="25.0" prefWidth="169.0" />
+                              <TextField fx:id="rg" layoutX="347.0" layoutY="37.0" prefHeight="25.0" prefWidth="117.0" />
+                              <TextField fx:id="telefone" layoutX="204.0" layoutY="104.0" prefHeight="25.0" prefWidth="117.0" />
+                              <TextField fx:id="email" layoutX="18.0" layoutY="104.0" prefHeight="25.0" prefWidth="151.0" />
+                              <TableView fx:id="tabelaClientes" layoutY="203.0" prefHeight="170.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn fx:id="colunaID" prefWidth="34.0" text="ID" />
+                                  <TableColumn fx:id="colunaNome" prefWidth="104.0" text="Nome" />
+                                    <TableColumn fx:id="colunaDocumento" prefWidth="105.0" text="Documentos" />
+                                    <TableColumn fx:id="colunaRG" prefWidth="111.0" text="RG" />
+                                    <TableColumn fx:id="colunaEmail" prefWidth="135.0" text="E-Mail" />
+                                    <TableColumn fx:id="colunaTelefone" prefWidth="168.0" text="Telefone" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Endereços">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo Cliente" />
+                              <Text layoutX="157.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cep" />
+                              <Text layoutX="16.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro" />
+                              <Text layoutX="190.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero" />
+                              <Text layoutX="14.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade" />
+                              <Text layoutX="155.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" />
+                              <Button fx:id="btnEx" layoutX="18.0" layoutY="189.0" mnemonicParsing="false" onAction="#executarOkEnd" text="Salvar" />
+                              <Button fx:id="btnExc" layoutX="92.0" layoutY="189.0" mnemonicParsing="false" onAction="#executarExcluirCadastro" text="Excluir" />
+                              <TableView fx:id="tabelaEndereco" layoutY="223.0" prefHeight="153.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn fx:id="colunaId" prefWidth="99.0" text="Codigo Cli" />
+                                  <TableColumn fx:id="colunaCEP" prefWidth="109.0" text="Cep" />
+                                    <TableColumn fx:id="colunaBairro" prefWidth="122.0" text="Bairro" />
+                                    <TableColumn fx:id="colunaNumero" prefWidth="71.0" text="Numero" />
+                                    <TableColumn fx:id="colunaCidade" minWidth="0.0" prefWidth="99.0" text="Cidade" />
+                                    <TableColumn fx:id="colunaEstado" prefWidth="99.0" text="Estado" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="incodigoCli" layoutX="17.0" layoutY="31.0" prefHeight="25.0" prefWidth="73.0" />
+                              <TextField fx:id="inCep" layoutX="154.0" layoutY="31.0" prefHeight="25.0" prefWidth="87.0" />
+                              <TextField fx:id="inBairro" layoutX="17.0" layoutY="97.0" prefHeight="25.0" prefWidth="124.0" />
+                              <TextField fx:id="inNumero" layoutX="190.0" layoutY="97.0" prefHeight="25.0" prefWidth="48.0" />
+                              <TextField fx:id="inEstado" layoutX="154.0" layoutY="148.0" prefHeight="25.0" prefWidth="61.0" />
+                              <TextField fx:id="inCidade" layoutX="17.0" layoutY="148.0" prefHeight="25.0" prefWidth="124.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>
